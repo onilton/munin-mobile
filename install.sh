@@ -3,13 +3,13 @@ echo ""
 echo "Mobile Munin Template Installer"
 echo ""
 echo "This will create the following directories: "
-echo " ./var/www/munin/mobile"
+echo " ./var/cache/munin/www/mobile" #for ubuntu other was ./var/www/munin/mobile
 echo " ./etc/munin/templates-mobiles"
 echo ""
 echo "And copy the following files:"
 echo " ./munin-mobile.conf   -> /etc/munin/munin-mobile.conf"
 echo " ./templates-mobiles/* -> /etc/munin/templates-mobiles/"
-echo " ./mobile-www/*        -> /var/www/munin/mobile/*"
+echo " ./mobile-www/*        -> /var/cache/munin/www/mobile/*"
 echo " ./update-mobile.sh    -> /etc/munin/update-mobile.sh"
 echo ""
 echo "It also sets the permissions to the same as your munin files"
@@ -61,13 +61,13 @@ chown -R /etc/munin/templates-mobiles --reference=/etc/munin/templates
 
 echo "- ./mobile-www                        -> /var/www/munin/mobile"
 
-if [ ! -d /var/www/munin/mobile ]
+if [ ! -d /var/cache/munin/www/mobile ]
 then
-    mkdir /var/www/munin/mobile
+    mkdir /var/cache/munin/www/mobile
 fi
 
-cp -r `pwd`/mobile-www/* /var/www/munin/mobile
-chown -R /var/www/munin/mobile --reference=/var/www/munin
+cp -r `pwd`/mobile-www/* /var/cache/munin/www/mobile
+chown -R /var/cache/munin/www/mobile --reference=/var/cache/munin/munin #was /var/www/munin
 
 echo "- ./update-mobile.sh                 -> /etc/munin/update-mobile.sh"
 
