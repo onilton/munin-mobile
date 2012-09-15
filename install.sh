@@ -11,8 +11,6 @@
 	then
 	    munin_html_dir="/var/cache/munin/www/"
 	fi
-	
-	munin_conf_fpath="$munin_conf_dir/munin.conf"
 
 	path_munin_conf="$munin_conf_dir/munin.conf"
 
