@@ -7,9 +7,9 @@
 	munin_tmpl_dir="$munin_conf_dir/templates"
 	
 	#Deal with ubuntu path case (it uses cache)
-	if [ ! -d /var/www/munin/ ]
+	if [ ! -d $munin_html_dir ]
 	then
-	    munin_html_dir="/var/cache/munin/www/"
+	    munin_html_dir="/var/cache/munin/www"
 	fi
 
 	path_munin_conf="$munin_conf_dir/munin.conf"
@@ -48,8 +48,8 @@ echo " .$path_tmpl"
 echo ""
 echo "And copy the following files:"
 echo " ./$mob_conf   -> $path_conf"
-echo " .$mob_tmpl_dir/* -> $path_tmpl/"
-echo " .$src_mob_html_dir/*        -> $path_html/*"
+echo " ./$mob_tmpl_dir/* -> $path_tmpl/"
+echo " ./$src_mob_html_dir/*        -> $path_html/*"
 echo " ./$mob_cron_script    -> $path_script"
 echo ""
 echo "It also sets the permissions to the same as your munin files"
