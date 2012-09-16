@@ -1,5 +1,7 @@
 FORKED
-This is a fork of Munin-Mobile to support Munin 1.4.5
+This is a fork of Munin-Mobile to support Munin 1.4.6 (and to make it work with ubuntu as a bonus).
+
+It uses the code from VvanGemert fork for 1.4.5, that is pretty good, but not enought to run in 1.4.6
 
 ORIGINAL PROJECT
 The original project can be found here: https://github.com/bivald/munin-mobile
