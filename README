@@ -1,43 +1,51 @@
+FORKED
+This is a fork of Munin-Mobile to support Munin 1.4.5
+
+ORIGINAL PROJECT
+The original project can be found here: https://github.com/bivald/munin-mobile
+
+---------------
+
 Munin Mobile
 By: Niklas Bivald
 
 www.munin-mobile.com
 
 INTRODUCTION
-Munin Mobile is a mobile template for Munin, using jquery-mobile. This allows 
-your Munin installations to be easily monitored with your smartphone. 
+Munin Mobile is a mobile template for Munin, using jquery-mobile. This allows
+your Munin installations to be easily monitored with your smartphone.
 
-Munin Mobile is initially made for the Munin debian package (1.2.6). Currently 
-I haven't tested any other versions.  
+Munin Mobile is initially made for the Munin debian package (1.2.6). Currently
+I haven't tested any other versions.
 
 Both Munin Mobile and jquery-mobile are a bit rough (jQuery Mobile is alpha!)
 and before you tell me that this could be made without jQuery Mobile using just
 special CSS: Yes, it could. But this is just as much exploring jQuery Mobile
 as it is exploring Munin.
 
-We're hooking into munin-html with a custom configuration file, hopefully making 
-it as "Munin-friendly" as possible. 
+We're hooking into munin-html with a custom configuration file, hopefully making
+it as "Munin-friendly" as possible.
 
 INSTALL
-Assuming you have the standard debian package (/etc/munin, /var/www/munin) you 
-*should* just be able to run the ./install.sh script. This will install templates 
+Assuming you have the standard debian package (/etc/munin, /var/www/munin) you
+*should* just be able to run the ./install.sh script. This will install templates
 and configuration file (which you might want to check out)
 
-We also need to make Munin create the job that regularly updates the HTML. In the 
-future we will hook it into Munin itself, but for now, use this crontab from your 
+We also need to make Munin create the job that regularly updates the HTML. In the
+future we will hook it into Munin itself, but for now, use this crontab from your
 Munin user:
 
 # m h  dom mon dow   command
 */5 * * * * /etc/munin/update-mobile.sh
 
-After installation, you should have a mobile-subfolder in your munin 
-(yourdomain.com/munin/mobile). 
+After installation, you should have a mobile-subfolder in your munin
+(yourdomain.com/munin/mobile).
 
 DEPENDENCIES
 None
 
 IMAGE RESIZING
-Previous versions resized all images using mogrify. If you still want to do this, 
+Previous versions resized all images using mogrify. If you still want to do this,
 simply "apt-get install imagemagick" and uncomment the last line of update-mobile.sh
 
 SCREENSHOTS
@@ -45,6 +53,7 @@ You will find screenshots on http://www.munin-mobile.com/screenshots/
 
 DEMO
 Demo can be found on http://demo.munin-mobile.com
+<<<<<<< HEAD
 
 MUNIN MOBILE FOR 1.4.5
 Can be found on fork https://github.com/VvanGemert/munin-mobile
@@ -57,3 +66,5 @@ MUNIN MOBILE LICENSE
 Munin Mobile is distrubuted under the GNU GPL version 2.  Munin Mobile
 is copyrighted 2010-2012 by its various authors as identified in the
 source files.
+=======
+>>>>>>> 2e12886f1bad75833c9d118bd0d1e80dbb0cf8c4
