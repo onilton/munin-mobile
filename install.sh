@@ -31,7 +31,7 @@
 
 #=== Final install paths ===#
 
-	path_conf="$munin_conf_dir/$mob_conf_file"
+	path_conf="$munin_conf_dir/$mob_conf"
 	path_tmpl="$munin_conf_dir/$mob_tmpl_dir"
 	path_html="$munin_html_dir/$dest_mob_html_dir"
 	path_script="$munin_conf_dir/$mob_script"
